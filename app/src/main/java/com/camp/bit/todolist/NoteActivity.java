@@ -72,7 +72,7 @@ public class NoteActivity extends AppCompatActivity {
         contentValues.put(TodoContract.TodoEntry.COLUMN_CONTENT,editText.getText().toString());
         contentValues.put(TodoContract.TodoEntry.COLUMN_DATA,System.currentTimeMillis());
         contentValues.put(TodoContract.TodoEntry.COLUMN_STATE,0);
-        database.insert("note",null,contentValues);
+        database.insert(TodoContract.TodoEntry.TABLE_NAME,null,contentValues);
         // TODO 插入一条新数据，返回是否插入成功
         return true;
     }

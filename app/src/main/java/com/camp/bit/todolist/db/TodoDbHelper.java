@@ -15,7 +15,7 @@ public class TodoDbHelper extends SQLiteOpenHelper {
 
     // TODO 定义数据库名、版本；创建数据库
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME="todo.db";
+    public static final String DATABASE_NAME="aodo.db";
     public TodoDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

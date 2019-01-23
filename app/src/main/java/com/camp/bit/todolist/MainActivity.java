@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor=null;
         try {
 
-            cursor=db.query("note",
+            cursor=db.query(TodoContract.TodoEntry.TABLE_NAME,
                     null,
                     null,null,null,null,
                     null);
@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
     String s= TodoContract.TodoEntry.COLUMN_ID+" =?";
     String a=  String.valueOf(note.id);
     String[] selectionArgs={a};
-        db.delete("note", s,selectionArgs);;
+        db.delete(TodoContract.TodoEntry.TABLE_NAME, s,selectionArgs);;
 
 
     }
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         String s= TodoContract.TodoEntry.COLUMN_ID+" =?";
         String a=  String.valueOf(note.id);
         String[] selectionArgs={a};
-        db.update("note", values, s,selectionArgs);
+        db.update(TodoContract.TodoEntry.TABLE_NAME, values, s,selectionArgs);
 
     }
 
